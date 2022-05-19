@@ -11,8 +11,12 @@ import Box from '@material-ui/core/Box';
 import {Helmet} from 'react-helmet';
 import Background from "./Background";
 import ComplexGrid from "./Image";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Contact from "./Contact";
+import Stores from "./Stores";
 
 
+/*
 function App() {
   return (
     <>
@@ -27,5 +31,22 @@ function App() {
 
   );
 }
+*/
 
+function App() {
+  return(
+    <main>
+      <Header /> 
+      <SecondHeader />
+      {/* <ComplexGrid /> */}
+      {/* <Background /> */}
+
+      <Routes>
+        <Route path='/Contact' element={<Contact/>} />
+        <Route path='/' element={<ComplexGrid/>} />
+        <Route path='/Stores' element={<Stores/>} />
+      </Routes>
+    </main>
+  )
+}
 export default App;

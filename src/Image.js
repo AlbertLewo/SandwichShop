@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import sandwich from './sandwich.jpg'; // with import
 import Button from "@mui/material/Button";
+import {Helmet} from 'react-helmet';
+
 
 const Img = styled('img')({
     margin: 'auto',
@@ -17,6 +19,10 @@ const Img = styled('img')({
   export default function ComplexGrid() {
     return (
       <>
+      <h1 style={{textAlign: "center"}}>Our Most Popular Sandwiches</h1>
+      <Helmet>
+        <style>{'body { background-color: #99EE99; }'}</style>
+      </Helmet>
       <Paper
         sx={{
           p: 2,
@@ -129,7 +135,7 @@ const Img = styled('img')({
                   Sandwich #3
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Bacon, Cheese, Tomato
+                  Bacon, Cheese, Tomato, Lettuceg
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Contains Dairy
