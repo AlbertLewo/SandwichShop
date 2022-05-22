@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import store1 from './store1.PNG'; // with import
 import store2 from './store2.PNG'; // with import
+import store3 from './store3.PNG'; // with import
+import store4 from './store4.PNG'; // with import
 import Button from "@mui/material/Button";
   
 
@@ -60,7 +62,7 @@ const Stores = () => {
       </Grid>
     </Grid>
   </Grid>
-
+<br></br>
 
 <Grid container spacing={22}>
     <Grid item>
@@ -92,8 +94,72 @@ const Stores = () => {
       </Grid>
     </Grid>
   </Grid>
-</Paper>
+ <br></br>
 
+<Grid container spacing={22}>
+    <Grid item>
+      <ButtonBase sx={{ width: 180, height: 240, marginLeft: 20}}>
+        <Img src={store3} />
+      </ButtonBase>
+    </Grid>
+    <Grid item xs={15} sm container>
+      <Grid item xs container direction="column" spacing={2}>
+        <Grid item xs>
+          <Typography gutterBottom variant="subtitle1" component="div">
+            Store Location 3:
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+          Address: 6 Allegra Avenue, Belmore NSW 2192
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            A stunning heritage store with a porch to enjoy your food. The grassy front lawn is perfect for furry pets and children to run around while you enjoy your meal.
+          </Typography>
+        </Grid>
+        <Grid item>
+          {/*Button???*/}
+        </Grid>
+      </Grid>
+      <Grid item>
+        <Typography variant="subtitle1" component="div">
+         {/*Money???*/}
+        </Typography>
+      </Grid>
+    </Grid>
+  </Grid>
+  <br></br>
+
+  <Grid container spacing={22}>
+    <Grid item>
+      <ButtonBase sx={{ width: 180, height: 240, marginLeft: 20}}>
+        <Img src={store4} />
+      </ButtonBase>
+    </Grid>
+    <Grid item xs={15} sm container>
+      <Grid item xs container direction="column" spacing={2}>
+        <Grid item xs>
+          <Typography gutterBottom variant="subtitle1" component="div">
+            Store Location 4:
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+          Address: 6 Allegra Avenue, Belmore NSW 2192
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Located near a reserve so customers can enjoy their sandwiches in a relaxing environment.
+          </Typography>
+        </Grid>
+        <Grid item>
+          {/*Button???*/}
+        </Grid>
+      </Grid>
+      <Grid item>
+        <Typography variant="subtitle1" component="div">
+         {/*Money???*/}
+        </Typography>
+      </Grid>
+    </Grid>
+  </Grid>
+
+</Paper>
   );
 };
 
