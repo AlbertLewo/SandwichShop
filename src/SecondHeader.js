@@ -17,14 +17,18 @@ export default function SecondHeader() {
     return (
         <AppBar position="static"> {/*This sets the postioning of the bar*/}
           <Toolbar> {/*This creates the blue bar at the top of the screeen*/} 
-          <Link to="/">Home Page </Link>
+          
           <Button>
-            <Link to="/Stores" color="#FFF">Stores </Link>
+          <Link to="/">Home Page </Link>
+          </Button>
+
+          <Button>
+            <Link to="/Stores" color="inherit">Stores </Link>
           </Button>
 
            {/* Placing Link in Button*/} 
-            <Button color="inherit">
-              <Link to="/Contact" color="inherit">Contact Us </Link>
+            <Button>
+              <Link to="/Contact" color="white">Contact Us </Link>
             </Button>
           
           </Toolbar> {/*Ends the toolbar and (below) appbar in JSX syntax */}

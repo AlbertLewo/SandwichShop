@@ -77,7 +77,7 @@ const Stores = () => {
             Store Location 2:
           </Typography>
           <Typography variant="body2" gutterBottom>
-          Address: 38 Palace Street, Ashfield NSW 2131
+          Address: 38 Palace St, Ashfield NSW 2131
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Located near a reserve so customers can enjoy their sandwiches in a relaxing environment.
@@ -109,7 +109,7 @@ const Stores = () => {
             Store Location 3:
           </Typography>
           <Typography variant="body2" gutterBottom>
-          Address: 6 Allegra Avenue, Belmore NSW 2192
+          Address: 6 Allegra Ave, Belmore NSW 2192
           </Typography>
           <Typography variant="body2" color="text.secondary">
             A stunning heritage store with a porch to enjoy your food. The grassy front lawn is perfect for furry pets and children to run around while you enjoy your meal.
@@ -141,10 +141,10 @@ const Stores = () => {
             Store Location 4:
           </Typography>
           <Typography variant="body2" gutterBottom>
-          Address: 6 Allegra Avenue, Belmore NSW 2192
+          Address: 1 Bertram Ln, Mortlake NSW 2137
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Located near a reserve so customers can enjoy their sandwiches in a relaxing environment.
+            The bay walk provides stunning views of the water and a variety of benches for customers to sit and enjoy your meal.
           </Typography>
         </Grid>
         <Grid item>

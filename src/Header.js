@@ -12,6 +12,8 @@ import Grid from '@mui/material/Grid';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { useState } from "react";
+import SignUp from './SignUp.js';
 
 const style = {
   position: 'absolute',
@@ -27,9 +29,18 @@ const style = {
 
 
 export default function Header() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const [open2, setOpen2] = useState(false);
+  const handleOpen2 = () => {
+    
+    setOpen2(true);
+    setOpen(false);
+
+  };
+  const handleClose2 = () => setOpen2(false);
 
     return (
         <AppBar position="static" elevation={0}>
@@ -55,6 +66,7 @@ export default function Header() {
               Sandwich Shop Header
             </Typography>
             <Button color="inherit">Cart</Button>
+            {/* Copy + Paste into another component */}
             <Button onClick={handleOpen} color="inherit">Login</Button>
             <Modal
         open={open}
@@ -64,22 +76,6 @@ export default function Header() {
       >
         <Box sx={style}>
           <Grid container justify="flex-end" alignItems="flex-end">
-            {/* <form> 
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Login to your account 
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Please enter your login details (username and password) or click 'Sign Up' to create an account.
-              </Typography>
-              <TextField id="outlined-basic" label="Username" variant="outlined" /> 
-                <TextField
-                id="outlined-password-input"
-                label="Password"
-                type="password"
-                autoComplete="current-password"
-                />
-            <Button onClick={handleOpen} color="inherit" style={{ bottom: -40, right: 200 }}>Login</Button>
-            </form> */}
           <Box component="form" noValidate sx={{ mt: 1 }}>
           <Typography align="center" id="modal-modal-title" variant="h6" component="h2">
             Login to your account 
@@ -112,20 +108,14 @@ export default function Header() {
             >
               Sign In
             </Button>
-            <Grid container>
-              <Grid item>
-                <Button color="inherit">Sign Up</Button>
-              </Grid>
-            </Grid>
           </Box>
         </Grid>
         </Box>
       </Modal>
+      <SignUp />
     </Toolbar>
   </AppBar>
 
 
     );
   }
-
-  
