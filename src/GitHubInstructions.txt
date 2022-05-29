@@ -1,5 +1,6 @@
 1. git init
 2. git add .
 3. git commit -m "Enter Message Here"
-4. git remote add origin https://github.com/AlbertLewo/SandwichShop
-5. git push origin master
+4. git push origin master
+
+git remote add origin https://github.com/AlbertLewo/SandwichShop (Link to Repository)
