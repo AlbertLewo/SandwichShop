@@ -28,9 +28,9 @@
   color: #61dafb;
 }
 
-a{
+.SecondHeader {
   color: white;
-  }
+}
 
 @keyframes App-logo-spin {
   from {
