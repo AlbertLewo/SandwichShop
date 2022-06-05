@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import TextField from '@mui/material/TextField';
+import axios from "axios";
 
 const style = {
     position: 'absolute',
@@ -27,6 +28,46 @@ export default function SignUp() {
   };
   const handleClose2 = () => setOpen2(false);
 
+    //  Variable     Function that sets variable
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
+
+  const handleSubmit = async e => {
+    console.log("here")
+    e.preventDefault();
+    
+  const userData = JSON.stringify({
+    username: username,
+    password: password,
+  }) ;  
+
+  axios.post("/api/signup", userData, {headers:{"Content-Type" : "application/json"}}
+).then((response) => {
+    console.log(response.status);
+    console.log(response.data);
+  });
+
+//     fetch("http://localhost:5000/api/signup", {
+//   method: "post",
+//   headers: {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   },
+
+//   body: JSON.stringify({
+//     username: username,
+//     password: password,
+//   })
+// })
+
+// .then( (response) => { 
+//   console.log(response.status);
+//   console.log(response.data);
+// });
+
+    
+  }
+
     return (
         <div>
     <Button onClick={handleOpen2} color="inherit">Sign Up</Button>
@@ -36,43 +77,48 @@ export default function SignUp() {
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
     >
-    <Box sx={style}>
-    <Grid>
-    <Box component="form" noValidate sx={{ mt: 1 }}>
-    <Typography align="center" id="modal-modal-title" variant="h6" component="h2">
-        Sign Up to create an account 
-    </Typography>
-    <Typography align="center" id="modal-modal-description" sx={{ mt: 2 }}>
-        Please enter your login details (username and password).
-    </Typography>
-        <TextField
-        margin="normal"
-        required
-        fullWidth
-        label="Username"
-        autoFocus
-        />
-        <TextField
-        margin="normal"
-        required
-        fullWidth
-        name="password"
-        label="Password"
-        type="password"
-        id="password"
-        autoComplete="current-password"
-        />
+
+    <form onSubmit={handleSubmit}>
+        <Box sx={style}>
+        <Grid>
+        <Box component="form" noValidate sx={{ mt: 1 }}>
+            <Typography align="center" id="modal-modal-title" variant="h6" component="h2">
+                Sign Up to create an account 
+            </Typography>
+            <Typography align="center" id="modal-modal-description" sx={{ mt: 2 }}>
+                Please enter your login details (username and password).
+            </Typography>
+                <TextField
+                margin="normal"
+                required
+                fullWidth
+                label="Username"
+                onChange={e => setUserName(e.target.value)}
+                autoFocus
+                />
+                <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                onChange={e => setPassword(e.target.value)}
+                />
+                
+        </Box>
+        </Grid>
+        </Box>
         <Button
-        type="submit"
-        fullWidth
-        variant="contained"
-        sx={{ mt: 3, mb: 2 }}
-        >
-        Sign Up
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+            >
+            Submit Login Details
         </Button>
-    </Box>
-    </Grid>
-    </Box>
+    </form>
     </Modal>
     </div>
     )
