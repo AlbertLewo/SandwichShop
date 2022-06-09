@@ -6,8 +6,7 @@ import 'react-dropdown/style.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./index.css";
 import ComplexGrid from "./Image";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Contact from "./Contact";
+import { Route, Routes } from 'react-router-dom';
 import Stores from "./Stores";
 import axios from "./axios";
 import React, { useEffect, useState } from "react";
@@ -15,6 +14,12 @@ import React, { useEffect, useState } from "react";
 
 function App() {
   const [result, setResult] = useState("");
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  function handleIsAuthChange(isLoggedIn) {
+    setLoggedIn({ isLoggedIn })
+  }
+
+  
 
   useEffect(() => {
     axios.get("api/login").then((response) => {

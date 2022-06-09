@@ -44,6 +44,9 @@ export default function SignUp() {
   axios.post("/api/signup", userData, {headers:{"Content-Type" : "application/json"}}
 ).then((response) => {
     console.log(response.status);
+    if (response.status == "200") {
+      console.log("successfully signed up")
+    }
     console.log(response.data);
   });
 

@@ -135,7 +135,7 @@ const Img = styled('img')({
                   Sandwich #3
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Bacon, Cheese, Tomato, Lettuceg
+                  Bacon, Cheese, Tomato, Lettuce
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Contains Dairy
