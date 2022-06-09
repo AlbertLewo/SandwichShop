@@ -47,24 +47,6 @@ export default function SignUp() {
     console.log(response.data);
   });
 
-//     fetch("http://localhost:5000/api/signup", {
-//   method: "post",
-//   headers: {
-//     'Accept': 'application/json',
-//     'Content-Type': 'application/json'
-//   },
-
-//   body: JSON.stringify({
-//     username: username,
-//     password: password,
-//   })
-// })
-
-// .then( (response) => { 
-//   console.log(response.status);
-//   console.log(response.data);
-// });
-
     
   }
 

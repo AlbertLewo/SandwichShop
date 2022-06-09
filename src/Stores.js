@@ -1,5 +1,4 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -9,7 +8,6 @@ import store1 from './store1.PNG'; // with import
 import store2 from './store2.PNG'; // with import
 import store3 from './store3.PNG'; // with import
 import store4 from './store4.PNG'; // with import
-import Button from "@mui/material/Button";
   
 
 const Img = styled('img')({

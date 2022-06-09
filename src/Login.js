@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import { useState } from "react";
+import axios from "axios";
 
 const style = {
     position: 'absolute',
@@ -24,6 +25,24 @@ export default function Login() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    const [username, setUserName] = useState();
+    const [password, setPassword] = useState();
+
+    const handleSubmit2 = async e => {
+        console.log("logged in")
+        e.preventDefault();
+        
+    const userData = JSON.stringify({
+        username: username,
+        password: password,
+     }) ;  
+
+     axios.post("/api/login", userData, {headers:{"Content-Type" : "application/json"}}
+    ).then((response) => {
+        console.log(response.status);
+        console.log(response.data);
+    });
+ }
     return (
         <div>
         <Button onClick={handleOpen} color="inherit">Login</Button>
@@ -33,6 +52,7 @@ export default function Login() {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
             >
+        <form onSubmit={handleSubmit2}>
         <Box sx={style}>
             <Grid container justify="flex-end" alignItems="flex-end">
             <Box component="form" noValidate sx={{ mt: 1 }}>
@@ -50,6 +70,7 @@ export default function Login() {
             required
             fullWidth
             label="Username"
+            onChange={e => setUserName(e.target.value)}
             autoFocus
             />
 
@@ -61,7 +82,7 @@ export default function Login() {
                 label="Password"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+                onChange={e => setPassword(e.target.value)}
             />
 
             <Button
@@ -76,6 +97,7 @@ export default function Login() {
     </Box>
     </Grid>
     </Box>
+    </form>
     </Modal>
     </div>
 )

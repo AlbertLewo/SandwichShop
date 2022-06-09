@@ -28,9 +28,9 @@ function App() {
       <Header /> 
       <SecondHeader />
       <Routes>
-        <Route path='/Contact' element={<Contact/>} />
         <Route path='/' element={<ComplexGrid/>} />
         <Route path='/Stores' element={<Stores/>} />
+        {/* <Route path='/Contact' element={<Contact/>} /> */}
       </Routes>
     </main>
   )
