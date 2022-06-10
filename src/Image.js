@@ -5,6 +5,10 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import sandwich from './sandwich.jpg'; // with import
+import LCT from './LCT.jpg';
+import HCC from './HCC.jpg';
+import SOC from './SOC.jpg';
+import SCMT from './SCMT.jpg'
 import Button from "@mui/material/Button";
 import {Helmet} from 'react-helmet';
 
@@ -30,13 +34,13 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#FFFDD0',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#C4ACE3',
         }}
       >
         <Grid container spacing={12}> {/* Spacing between image and text/buttons */}
           <Grid item>
             <ButtonBase sx={{ width: 140, height: 240, marginLeft: 10}}>
-              <Img src={sandwich} />
+              <Img src={LCT} />
             </ButtonBase>
           </Grid>
           <Grid item xs={20} sm container>
@@ -75,7 +79,7 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#FFFDD0',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#C29A7B',
         }}
       >
         <Grid container spacing={12}>
@@ -91,7 +95,7 @@ const Img = styled('img')({
                   Sandwich #2
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Lettuce, Cucumber, Beetroot
+                  Lettuce, Tomato, Cheese, Ham
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Gluten Free
@@ -119,13 +123,13 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#FFFDD0',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#FF6961',
         }}
       >
         <Grid container spacing={12}>
           <Grid item>
             <ButtonBase sx={{ width: 140, height: 240, marginLeft: 10}}>
-              <Img src={sandwich} />
+              <Img src={HCC} />
             </ButtonBase>
           </Grid>
           <Grid item xs={15} sm container>
@@ -135,7 +139,7 @@ const Img = styled('img')({
                   Sandwich #3
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Bacon, Cheese, Tomato, Lettuce
+                  Ham, Cheese, Cucumber
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Contains Dairy
@@ -163,13 +167,13 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#FFFDD0',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#FFF979',
         }}
       >
         <Grid container spacing={12}>
           <Grid item>
             <ButtonBase sx={{ width: 140, height: 240, marginLeft: 10}}>
-              <Img src={sandwich} />
+              <Img src={SOC} />
             </ButtonBase>
           </Grid>
           <Grid item xs={15} sm container>
@@ -207,13 +211,13 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#FFFDD0',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#C5F1FF',
         }}
       >
         <Grid container spacing={12}>
           <Grid item>
             <ButtonBase sx={{ width: 140, height: 240, marginLeft: 10}}>
-              <Img src={sandwich} />
+              <Img src={SCMT} />
             </ButtonBase>
           </Grid>
           <Grid item xs={15} sm container>

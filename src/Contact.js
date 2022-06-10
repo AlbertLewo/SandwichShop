@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, CardContent, Grid, TextField, Button } from '@material-ui/core'
+import { Typography, Card, CardContent, Grid, TextField, Button } from '@mui/material'
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
