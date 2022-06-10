@@ -10,6 +10,8 @@ import { Route, Routes } from 'react-router-dom';
 import Stores from "./Stores";
 import axios from "./axios";
 import React, { useEffect, useState } from "react";
+import Contact from './Contact.js';
+
 
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ComplexGrid/>} />
         <Route path='/Stores' element={<Stores/>} />
-        {/* <Route path='/Contact' element={<Contact/>} /> */}
+        <Route path='/Contact' element={<Contact/>} />
       </Routes>
     </main>
   )
