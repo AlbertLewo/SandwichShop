@@ -9,20 +9,20 @@ import Toolbar from "@mui/material/Toolbar";
 
 export default function SecondHeader() {
     return (
-        <AppBar position="static"> {/*This sets the postioning of the bar*/}
+        <AppBar style={{ background: '#EDD2A4' }} position="static"> {/*This sets the postioning of the bar*/}
           <Toolbar> {/*This creates the blue bar at the top of the screeen*/} 
           
           <Button>
-          <Link to="/" color='secondary'>Home Page </Link>
+          <Link to="/" style={{ background: '' }}>Home Page </Link>
           </Button>
 
           <Button>
-            <Link to="/Stores" color='secondary'>Stores </Link>
+            <Link to="/Stores" style={{ background: '' }}>Stores </Link>
           </Button>
 
            {/* Placing Link in Button*/} 
             <Button>
-              <Link to="/Contact" color='secondary'>Contact Us </Link>
+              <Link to="/Contact" style={{ background: '' }}>Contact Us </Link>
             </Button>
           
           </Toolbar> {/*Ends the toolbar and (below) appbar in JSX syntax */}

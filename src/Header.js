@@ -11,7 +11,7 @@ import Cart from './Cart.js'
 
 export default function Header() {
     return (
-        <AppBar position="static" elevation={0}>
+        <AppBar position="static" elevation={0} style={{ background: '#F0967D' }}>
           <Toolbar>
             {/*Inside the IconButton, we 
              can render various icons*/}
@@ -30,7 +30,7 @@ export default function Header() {
              default font weights and sizes */}
     
             <Typography variant="h6" 
-              component="div" sx={{ flexGrow: 1 }}>
+              component="div" sx={{ flexGrow: 1 }} >
               Big Munch Sandwiches
             </Typography>
             
