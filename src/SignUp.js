@@ -20,7 +20,7 @@ const style = {
     p: 4,
   };
 
-export default function SignUp() {
+export default function SignUp({handleIsAuthChange}) {
     const [open2, setOpen2] = useState(false);
     const handleOpen2 = () => {
     setOpen2(true);
@@ -44,9 +44,12 @@ export default function SignUp() {
   axios.post("/api/signup", userData, {headers:{"Content-Type" : "application/json"}}
 ).then((response) => {
     console.log(response.status);
-    if (response.status == "200") {
-      console.log("successfully signed up")
+
+    if(response.status == '200'){
+      handleIsAuthChange(true)
     }
+
+    
     console.log(response.data);
   });
 
@@ -63,8 +66,9 @@ export default function SignUp() {
     aria-describedby="modal-modal-description"
     >
 
-    <form onSubmit={handleSubmit}>
+   
         <Box sx={style}>
+        <form onSubmit={handleSubmit}>
         <Grid>
         <Box component="form" noValidate sx={{ mt: 1 }}>
             <Typography align="center" id="modal-modal-title" variant="h6" component="h2">
@@ -94,7 +98,6 @@ export default function SignUp() {
                 
         </Box>
         </Grid>
-        </Box>
         <Button
             type="submit"
             fullWidth
@@ -103,7 +106,8 @@ export default function SignUp() {
             >
             Submit Login Details
         </Button>
-    </form>
+        </form>
+        </Box>
     </Modal>
     </div>
     )

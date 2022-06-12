@@ -9,7 +9,12 @@ import SignUp from './SignUp.js';
 import Login from './Login.js';
 import Cart from './Cart.js'
 
-export default function Header() {
+export default function Header({handleIsAuthChange, isLoggedIn}) {
+  function handleLogout(){
+    handleIsAuthChange(false)
+    window.location.reload(false);
+  }
+
     return (
         <AppBar position="static" elevation={0} style={{ background: '#F0967D' }}>
           <Toolbar>
@@ -33,10 +38,19 @@ export default function Header() {
               component="div" sx={{ flexGrow: 1 }} >
               Big Munch Sandwiches
             </Typography>
-            
-      <Cart />
-      <Login />
-      <SignUp />
+
+      {isLoggedIn
+        ? 
+          <> 
+            <Cart />
+            <Button onClick={handleLogout} color="inherit">Logout</Button>
+          </>
+         
+        : <>
+            <Login  style={{display: 'inline-block'}}  />
+            <SignUp  style={{display: 'inline-block'}}  handleIsAuthChange={handleIsAuthChange}/>
+          </>
+      }           
     </Toolbar>
   </AppBar>
 

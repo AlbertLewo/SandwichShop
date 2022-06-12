@@ -72,15 +72,15 @@ server.post("/api/contact", (req, res) => {
         console.log('File exists');
         fs.readFile('contact.json', 'utf8', function readFileCallback(err, data){
 
-    if (err){
-        console.log(err);
+        if (err){
+            console.log(err);
 
-    } else {
-        obj = JSON.parse(data); //now it's an object
-        obj.push(req.body) // we push the JSON object into the JSON array
-        console.log(obj)
-        var json = JSON.stringify(obj); //convert it back to json to write into our details.json file
-        fs.writeFile('contact.json', json, 'utf8', function(err) {
+        } else {
+            obj = JSON.parse(data); //now it's an object
+            obj.push(req.body) // we push the JSON object into the JSON array
+            console.log(obj)
+            var json = JSON.stringify(obj); //convert it back to json to write into our details.json file
+            fs.writeFile('contact.json', json, 'utf8', function(err) {
 
     if (err) throw err;
         console.log('complete');
@@ -88,14 +88,14 @@ server.post("/api/contact", (req, res) => {
         ); // write it back 
     }});
     
-    } else if(err.code === 'ENOENT') {
-    // file does not exist
-    // first create an empty array and push the data we get from frontend into the array
-    // this is necessary so we can use the obj.push function on line 28 -> JSON files are structured with square brackets outside
-    // then curly brace json OBJECTS inside
-        var arr = []
-        arr.push(req.body)
-        fs.writeFile ("contact.json", JSON.stringify(arr), function(err) {
+        } else if(err.code === 'ENOENT') {
+        // file does not exist
+        // first create an empty array and push the data we get from frontend into the array
+        // this is necessary so we can use the obj.push function on line 28 -> JSON files are structured with square brackets outside
+        // then curly brace json OBJECTS inside
+            var arr = []
+            arr.push(req.body)
+            fs.writeFile ("contact.json", JSON.stringify(arr), function(err) {
 
     if (err) throw err;
         console.log('complete');
@@ -108,6 +108,12 @@ server.post("/api/contact", (req, res) => {
     }); 
 
     res.status(200).send("Contact Submit!");
+});
+
+
+
+server.post("api/cartupdate", (req, res) => {
+    //
 });
 
 

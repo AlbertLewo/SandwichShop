@@ -3,4 +3,4 @@
 3. git commit -m "Enter Message Here"
 4. git push origin master
 
-git remote add origin https://github.com/AlbertLewo/SandwichShop (Link to Repository)
+$ git remote add origin https://github.com/{AlbertLewo}/{SandwichShop}.git

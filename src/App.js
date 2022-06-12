@@ -17,7 +17,14 @@ import Contact from './Contact.js';
 function App() {
   const [result, setResult] = useState("");
   const [isLoggedIn, setLoggedIn] = useState(false);
+
   function handleIsAuthChange(isLoggedIn) {
+    if(isLoggedIn){
+      console.log("Logged in = True")
+    }
+    else{
+      console.log("Logged in = False")
+    }
     setLoggedIn({ isLoggedIn })
   }
 
@@ -32,7 +39,7 @@ function App() {
   return(
     <main>
     {result && <h1>{result}</h1>}  
-      <Header /> 
+      <Header handleIsAuthChange={handleIsAuthChange} isLoggedIn={isLoggedIn}/> 
       <SecondHeader />
       <Routes>
         <Route path='/' element={<ComplexGrid/>} />
