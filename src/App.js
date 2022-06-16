@@ -17,6 +17,7 @@ import Contact from './Contact.js';
 function App() {
   const [result, setResult] = useState("");
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const [loggedInUsername, setCurrentUsername] = useState("")
 
   function handleIsAuthChange(isLoggedIn) {
     if(isLoggedIn){
@@ -28,7 +29,6 @@ function App() {
     setLoggedIn({ isLoggedIn })
   }
 
-  
 
   useEffect(() => {
     axios.get("api/login").then((response) => {
@@ -36,10 +36,20 @@ function App() {
     });
    }, []);
 
+  function handleUserLoggedIn(loggedInUsername) {
+    setCurrentUsername(loggedInUsername)
+    console.log("The user logged in is " + loggedInUsername)
+  }
+
   return(
     <main>
     {result && <h1>{result}</h1>}  
-      <Header handleIsAuthChange={handleIsAuthChange} isLoggedIn={isLoggedIn}/> 
+      <Header handleIsAuthChange={handleIsAuthChange}
+      isLoggedIn={isLoggedIn}
+      handleUserLoggedIn={handleUserLoggedIn}
+      loggedInUsername={loggedInUsername}
+      /> 
+
       <SecondHeader />
       <Routes>
         <Route path='/' element={<ComplexGrid/>} />

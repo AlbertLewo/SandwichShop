@@ -20,7 +20,7 @@ const style = {
     p: 4,
   };
 
-export default function Login() {
+export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -37,12 +37,18 @@ export default function Login() {
         password: password,
      }) ;  
 
-     axios.post("/api/login", userData, {headers:{"Content-Type" : "application/json"}}
+    axios.post("/api/login", userData, {headers:{"Content-Type" : "application/json"}}
     ).then((response) => {
-        console.log(response.status);
-        console.log(response.data);
-    });
- }
+            if(response.data.status == '200'){
+                handleIsAuthChange(true)
+                handleUserLoggedIn(response.data.username)
+            }
+            else if(response.data.status == '401'){
+                alert("Wrong username/password, please retry")
+            }
+        });
+    }
+
     return (
         <div>
         <Button onClick={handleOpen} color="inherit">Login</Button>

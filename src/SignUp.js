@@ -20,7 +20,7 @@ const style = {
     p: 4,
   };
 
-export default function SignUp({handleIsAuthChange}) {
+export default function SignUp({handleIsAuthChange, handleUserLoggedIn}) {
     const [open2, setOpen2] = useState(false);
     const handleOpen2 = () => {
     setOpen2(true);
@@ -43,12 +43,16 @@ export default function SignUp({handleIsAuthChange}) {
 
   axios.post("/api/signup", userData, {headers:{"Content-Type" : "application/json"}}
 ).then((response) => {
-    console.log(response.status);
+  
+  if(response.data.status == '200'){
+    handleIsAuthChange(true)
+    console.log(response.data.username)
+    handleUserLoggedIn(response.data.username)
+  }
 
-    if(response.status == '200'){
-      handleIsAuthChange(true)
-    }
-
+  else if(response.data.status == '401'){
+    alert('A user already exists with that username. Please signup with another account')
+  }
     
     console.log(response.data);
   });

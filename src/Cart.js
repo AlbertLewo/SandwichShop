@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import { useState } from "react";
 
@@ -42,27 +41,8 @@ export default function Cart() {
             </Typography>
             
             <Typography align="center" id="modal-modal-description" sx={{ mt: 2 }}>
-                ...
+                What you purchased goes here
             </Typography>
-
-            <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Username"
-            autoFocus
-            />
-
-            <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-            />
 
             <Button
                 type="submit"
@@ -70,7 +50,7 @@ export default function Cart() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
             >
-            Sign In
+            Go to Payment
 
             </Button>
     </Box>

@@ -25,7 +25,7 @@ const Img = styled('img')({
       <>
       <h1 style={{textAlign: "center"}}>Our Most Popular Sandwiches</h1>
       <Helmet>
-        <style>{'body { background-color: #99EE99; }'}</style>
+        <style>{'body { background-color: #FF7779}'}</style>
       </Helmet>
       <Paper
         sx={{
@@ -34,7 +34,7 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#C4ACE3',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#F4c2c2',
         }}
       >
         <Grid container spacing={12}> {/* Spacing between image and text/buttons */}
@@ -79,7 +79,7 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#C29A7B',
+            theme.palette.mode === 'dark' ? '#1A2027' : '	#ffd7b5',
         }}
       >
         <Grid container spacing={12}>
@@ -167,7 +167,7 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#FFF979',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#ffd7b5',
         }}
       >
         <Grid container spacing={12}>
@@ -211,7 +211,7 @@ const Img = styled('img')({
           maxWidth: '100%',
           flexGrow: 1,
           backgroundColor: (theme) =>
-            theme.palette.mode === 'dark' ? '#1A2027' : '#C5F1FF',
+            theme.palette.mode === 'dark' ? '#1A2027' : '#F4c2c2',
         }}
       >
         <Grid container spacing={12}>

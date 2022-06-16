@@ -178,7 +178,7 @@ const Stores = () => {
             Store Location 5:
           </Typography>
           <Typography variant="body2" gutterBottom>
-          Address: 28 Wise Close, Darwin NT 2830
+          Address: 10 Durian Road, Virginia NT 0834
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Located near a decent-sized park. A perfect location to enjoy our sandwiches on a beautiful sunny day.

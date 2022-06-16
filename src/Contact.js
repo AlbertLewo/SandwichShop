@@ -53,7 +53,9 @@ const Contact = () => {
   });
 };
 
-
+function refreshPage() {
+  window.location.reload(false);
+}
 
   return (      
     <div className="App">
@@ -70,12 +72,12 @@ const Contact = () => {
 
 <br></br>
 
-      <Card style={{flex:1, backgroundColor:'#FFFDD0'}}>
+      <Card style={{backgroundColor:'#FFFDD0'}}>
         <CardContent>
           <Grid container={1} direction={"row"} spacing={5} >
 
           <Grid xs={16} sm={3} item>
-            <TextField onChange={e => setFirstName(e.target.value)} style={{flex:1, backgroundColor:'white'}} label="First Name" placeholder="Enter your first name" variant="outlined" fullWidth/>
+            <TextField onChange={e => setFirstName(e.target.value)} style={{backgroundColor: 'white'}} label="First Name" placeholder="Enter your first name" variant="outlined" fullWidth/>
           </Grid>
 
           <Grid xs={16} sm={3} item>
@@ -167,11 +169,12 @@ const Contact = () => {
           </Grid>
         </CardContent>
       </Card>
+    
 
       <Card>
         <CardContent>
           <Grid container={1} direction={"row"} spacing={5}>
-            <Button 
+            <Button onClick={refreshPage}
                 type="submit"
                 variant="contained"
                 sx={{ mt: 3, mb: 1 }}
@@ -188,5 +191,4 @@ const Contact = () => {
     
   );
 };
-
 export default Contact;

@@ -9,9 +9,10 @@ import SignUp from './SignUp.js';
 import Login from './Login.js';
 import Cart from './Cart.js'
 
-export default function Header({handleIsAuthChange, isLoggedIn}) {
+export default function Header({handleIsAuthChange, isLoggedIn, handleUserLoggedIn, loggedInUsername}) {
   function handleLogout(){
     handleIsAuthChange(false)
+    handleUserLoggedIn("")
     window.location.reload(false);
   }
 
@@ -42,13 +43,21 @@ export default function Header({handleIsAuthChange, isLoggedIn}) {
       {isLoggedIn
         ? 
           <> 
+          Welcome {loggedInUsername}
             <Cart />
             <Button onClick={handleLogout} color="inherit">Logout</Button>
           </>
          
         : <>
-            <Login  style={{display: 'inline-block'}}  />
-            <SignUp  style={{display: 'inline-block'}}  handleIsAuthChange={handleIsAuthChange}/>
+            <Login  style={{display: 'inline-block'}}
+            handleIsAuthChange={handleIsAuthChange}
+            handleUserLoggedIn={handleUserLoggedIn}
+            />
+
+            <SignUp  style={{display: 'inline-block'}}  
+            handleIsAuthChange={handleIsAuthChange}
+            handleUserLoggedIn={handleUserLoggedIn}
+            />
           </>
       }           
     </Toolbar>
