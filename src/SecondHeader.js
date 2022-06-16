@@ -24,6 +24,10 @@ export default function SecondHeader() {
             <Button>
               <Link to="/Contact" style={{ background: '' }}>Contact Us </Link>
             </Button>
+
+            <Button>
+              <Link to="/Help" style={{ background: '' }}>Help </Link>
+            </Button>
           
           </Toolbar> {/*Ends the toolbar and (below) appbar in JSX syntax */}
         </AppBar>

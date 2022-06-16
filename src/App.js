@@ -11,6 +11,7 @@ import Stores from "./Stores";
 import axios from "./axios";
 import React, { useEffect, useState } from "react";
 import Contact from './Contact.js';
+import Help from './Help.js';
 
 
 
@@ -30,11 +31,11 @@ function App() {
   }
 
 
-  useEffect(() => {
-    axios.get("api/login").then((response) => {
-      setResult(response.data);
-    });
-   }, []);
+  // useEffect(() => {
+  //   axios.get("api/login").then((response) => {
+  //     setResult(response.data);
+  //   });
+  //  }, []);
 
   function handleUserLoggedIn(loggedInUsername) {
     setCurrentUsername(loggedInUsername)
@@ -55,6 +56,7 @@ function App() {
         <Route path='/' element={<ComplexGrid/>} />
         <Route path='/Stores' element={<Stores/>} />
         <Route path='/Contact' element={<Contact/>} />
+        <Route path='/Help' element={<Help/>} />
       </Routes>
     </main>
   )
