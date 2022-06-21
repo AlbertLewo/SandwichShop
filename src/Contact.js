@@ -54,12 +54,13 @@ const Contact = () => {
 };
 
 function refreshPage() {
-  window.location.reload(false);
+  alert("Thank you for your feedback. We will try to respond to your inquiry as soon as possible!!!")
+  window.location.reload(false)
 }
 
   return (      
     <div className="App">
-        <style>{'body { background-color: #C5F1FF; }'}</style>
+        <style>{'body { background-color: #FF7779; }'}</style>
 
       <form onSubmit={formSubmit}>
       <Typography align="center" id="modal-modal-title" variant="h3" component="h3" >
@@ -72,7 +73,7 @@ function refreshPage() {
 
 <br></br>
 
-      <Card style={{backgroundColor:'#FFFDD0'}}>
+      <Card style={{backgroundColor:'#3E0E14'}}>
         <CardContent>
           <Grid container={1} direction={"row"} spacing={5} >
 
@@ -88,7 +89,7 @@ function refreshPage() {
         </CardContent>
       </Card>
 
-      <Card style={{flex:1, backgroundColor:'#C29A7B'}}>
+      <Card style={{flex:1, backgroundColor:'#5c1010'}}>
         <CardContent>
           <Grid container={1} direction={"row"} spacing={5}>
 
@@ -105,7 +106,7 @@ function refreshPage() {
       </Card>
 
       <Card>
-        <CardContent style={{flex:1, backgroundColor:'#FF6961'}}>
+        <CardContent style={{flex:1, backgroundColor:'#960000'}}>
           <Grid container={1} direction={"row"} spacing={5}>
             <Grid xs={16} sm={3} item>
               <TextField onChange={e => setAddress(e.target.value)} style={{flex:1, backgroundColor:'white'}} label="Address" placeholder="Enter your address" variant="outlined" fullWidth/>
@@ -120,7 +121,7 @@ function refreshPage() {
       </Card>
 
       <Card>
-        <CardContent style={{flex:1, backgroundColor:'#FFF979'}}>
+        <CardContent style={{flex:1, backgroundColor:'#c30101'}}>
           <Grid container={1} direction={"row"} spacing={5}>
             <Grid xs={16} sm={3} item>
               <TextField onChange={e => setPostcode(e.target.value)} style={{flex:1, backgroundColor:'white'}} type='number' label="Postcode" placeholder="Enter your Postcode" variant="outlined" fullWidth/>
@@ -159,7 +160,7 @@ function refreshPage() {
 
 
       <Card>
-        <CardContent style={{flex:1, backgroundColor:'#99EE99'}} align={'Center'}>
+        <CardContent style={{flex:1, backgroundColor:'#e10000'}} align={'Center'}>
           <Grid container={1} direction={"row"} spacing={5}>
 
             <Grid xs={16} sm={3} item>
@@ -178,7 +179,8 @@ function refreshPage() {
                 type="submit"
                 variant="contained"
                 sx={{ mt: 3, mb: 1 }}
-                style={{flex:1, backgroundColor:'#C4ACE3'}}
+                style={{flex:1, backgroundColor:'#FF6961'}}
+                
               >
               Submit Form
 

@@ -53,7 +53,7 @@ function App() {
 
       <SecondHeader />
       <Routes>
-        <Route path='/' element={<ComplexGrid/>} />
+        <Route path='/' element={<ComplexGrid isLoggedIn={isLoggedIn} loggedInUsername={loggedInUsername}/>}/>
         <Route path='/Stores' element={<Stores/>} />
         <Route path='/Contact' element={<Contact/>} />
         <Route path='/Help' element={<Help/>} />

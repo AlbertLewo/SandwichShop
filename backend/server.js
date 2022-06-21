@@ -6,6 +6,75 @@ const fs = require('fs');
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
+server.get("/api/getsandwiches", (req, res) => {
+    var return_obj = {}
+    console.log("reading")
+    fs.readFile('sandwiches.json', 'utf8', function readFileCallback(err, data){
+        console.log("reading")
+            if (err){
+                console.log(err);
+            } 
+            else {
+                obj = JSON.parse(data); //now it's an object
+                return_obj = {status: 200, data: obj}
+                res.status(200).send(return_obj);
+            }       
+    })   
+});
+
+server.post("/api/cartadd", (req, res) => {
+    // save to a json file -> cart 
+    // username: username
+    // cart: [{sandwich1}, {sandwich2}, {sandwich3}]
+    // save username + cart details 
+    // will need to read the cart.json file -> find the username and cart pair -> update the file with the newly added sandwich
+    var return_obj = {}
+    
+    fs.stat('shoppingcart.json', function(err, stat) {
+        if(err == null) {
+            console.log('File exists');
+            fs.readFile('shoppingcart.json', 'utf8', function readFileCallback(err, data){
+                if (err){
+                    console.log(err);
+                } 
+
+                else {
+                    obj = JSON.parse(data); //now it's an object
+                    obj.push(req.body) 
+                    console.log(obj)            
+                    var json = JSON.stringify(obj); 
+
+                    fs.writeFile('shoppingcart.json', json, 'utf8', function(err) {
+                    if (err) throw err;
+                        console.log('Error occurred with writing to cart');
+                    }); // write it back 
+                    
+                    return_obj = {status: 200}
+                    res.status(200).send(return_obj);
+                }
+            });
+        } 
+                    
+        else if(err.code === 'ENOENT') {
+            // file does not exist
+            // first create an empty array and push the data we get from frontend into the array
+            // this is necessary so we can use the obj.push function
+            // then curly brace json OBJECTS inside
+            var arr = []
+            arr.push(req.body)
+            fs.writeFile ('shoppingcart.json', JSON.stringify(arr), function(err) {
+            
+            if (err) throw err;
+                console.log('complete');
+            });
+            } 
+            
+            else {
+                console.log('Some other error: ', err.code);
+            }
+    }); 
+});
+
 server.post("/api/login", (req, res) => {
     var loginExists = false
     fs.stat('details.json', function(err, stat) {

@@ -1,12 +1,5 @@
 import React from 'react';
 import { Typography, Card, CardContent, Grid, TextField, Button } from '@mui/material'
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import axios from 'axios';
-import { useState } from "react";
 
 const Help = () => {
  
@@ -72,6 +65,32 @@ const Help = () => {
     <Grid xs={1} sm={14} item>
       <h3>Home Page</h3>
       <h4>Most likely the page you will be greeted to once you open the website. From the navbar, you can access a few other pages</h4>
+    </Grid> 
+
+  </Grid>
+</CardContent>
+</Card>
+
+<Card>
+<CardContent style={{flex:1, backgroundColor:'#FCE16D'}} align={'Center'}> 
+  <Grid container={1} direction={"row"} spacing={5}>
+
+    <Grid xs={1} sm={14} item>
+      <h3>Stores </h3>
+      <h4>This webpage shows all of our stores across Australia. It contains the store #, address and a small decription about the surrounding environment of the store</h4>
+    </Grid> 
+
+  </Grid>
+</CardContent>
+</Card>
+
+<Card>
+<CardContent style={{flex:1, backgroundColor:'#FFEAA2'}} align={'Center'}> 
+  <Grid container={1} direction={"row"} spacing={5}>
+
+    <Grid xs={1} sm={14} item>
+      <h3>Contact Us </h3>
+      <h4>Have any inquires, concerns, bad experiences, etc? This website allows users to share their experience with Big Munch Sandwiches. Additionally, customers can shoot any suggestions or ideas that we may take into consideration</h4>
     </Grid> 
 
   </Grid>

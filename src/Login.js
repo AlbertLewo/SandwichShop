@@ -58,8 +58,9 @@ export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
             >
-        <form onSubmit={handleSubmit2}>
+       
         <Box sx={style}>
+        <form onSubmit={handleSubmit2}>
             <Grid container justify="flex-end" alignItems="flex-end">
             <Box component="form" noValidate sx={{ mt: 1 }}>
             
@@ -90,7 +91,8 @@ export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
                 id="password"
                 onChange={e => setPassword(e.target.value)}
             />
-
+        </Box>
+        </Grid>
             <Button
                 type="submit"
                 fullWidth
@@ -100,10 +102,8 @@ export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
             Sign In
 
             </Button>
-    </Box>
-    </Grid>
-    </Box>
     </form>
+    </Box>
     </Modal>
     </div>
 )
