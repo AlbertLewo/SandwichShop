@@ -75,6 +75,45 @@ server.post("/api/cartadd", (req, res) => {
     }); 
 });
 
+server.post("/api/readcart", (req, res) => {
+    // read the cart.json file and return the cart for the user
+    // username to retrieve the cart
+    // send back to frontend
+    var returnArray = []
+    var return_obj = {}
+    console.log(req.body)
+    
+    fs.stat('shoppingcart.json', function(err, stat) {
+        if(err == null) {
+            console.log('File exists');
+            fs.readFile('shoppingcart.json', 'utf8', function readFileCallback(err, data){
+                if (err){
+                    console.log(err);
+                } 
+                else {
+                    obj = JSON.parse(data); //now it's an object
+                    for (const x of obj) { 
+                        console.log(x.username)
+
+                        if(x.username == req.body.username){
+                            // this is the same persons cart so we will add to our array of stuff to return back 
+                            console.log(x.sandwich)
+                            returnArray.push(x.sandwich)
+                        }
+                    }
+                    return_obj = {status: 200, sandwiches: returnArray}
+                    res.status(200).send(return_obj);
+                }});
+            } 
+
+            else {
+                // send back empty cart 
+                res.status(200).send(return_obj);
+                console.log('Some other error: ', err.code);
+            }
+        })
+    });
+
 server.post("/api/login", (req, res) => {
     var loginExists = false
     fs.stat('details.json', function(err, stat) {

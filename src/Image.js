@@ -4,11 +4,6 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
-import sandwich from './sandwich.jpg'; // with import
-import LCT from './LCT.jpg';
-import HCC from './HCC.jpg';
-import SOC from './SOC.jpg';
-import SCMT from './SCMT.jpg'
 import Button from "@mui/material/Button";
 import {Helmet} from 'react-helmet';
 import axios from 'axios';
@@ -31,13 +26,13 @@ const Img = styled('img')({
       }) ;
     }, []);
 
-    const handleAddSandwich = (sandwichName) => async e => {
+    const handleAddSandwich = (sandwich) => async e => {
       e.preventDefault();
-      console.log(sandwichName)
+      console.log(sandwich)
 
       const sandwichObj = JSON.stringify({
         username: loggedInUsername,
-        sandwich: sandwichName
+        sandwich: sandwich
       }) ;
 
       axios.post("/api/cartadd", sandwichObj, {headers:{"Content-Type" : "application/json"}}
@@ -89,7 +84,7 @@ const Img = styled('img')({
                 {
                   isLoggedIn ?
                   <>
-                  <Button color="inherit" onClick={handleAddSandwich(s.name)}>Add to Cart</Button>
+                  <Button color="inherit" onClick={handleAddSandwich(s)}>Add to Cart</Button>
                   <Button color="inherit" >Edit Sandwich</Button>
                   <Button color="inherit" >Buy Single Sandwich</Button>
                   </>

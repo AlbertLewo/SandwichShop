@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 import Modal from '@mui/material/Modal';
 import Grid from '@mui/material/Grid';
 import { useState } from "react";
+import axios from 'axios';
+import Paper from '@mui/material/Paper';
 
 const style = {
     position: 'absolute',
@@ -18,10 +20,23 @@ const style = {
     p: 4,
   };
 
-export default function Cart() {
+export default function Cart({loggedInUsername}) {
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
+    const [sandwiches, setSandwiches] = useState([]);
     const handleClose = () => setOpen(false);
+
+    const handleOpen = () => {
+        console.log(loggedInUsername)
+        setOpen(true);
+        const userObj = JSON.stringify({
+            username: loggedInUsername
+        });
+        axios.post("/api/readcart", userObj, {headers:{"Content-Type" : "application/json"}})
+        .then(res => {
+            setSandwiches(res.data.sandwiches)
+            console.log(res.data.sandwiches)
+        })
+    };
 
     return (
         <div>
@@ -43,6 +58,49 @@ export default function Cart() {
             <Typography align="center" id="modal-modal-description" sx={{ mt: 2 }}>
                 What you purchased goes here
             </Typography>
+
+            <>
+            {
+                sandwiches.map(s => (
+                    <Paper
+                    sx={{
+                        p: 2,
+                        margin: 'auto',
+                        maxWidth: '100%',
+                        flexGrow: 1,
+                        backgroundColor: (theme) =>
+                        theme.palette.mode === 'dark' ? '#1A2027' : '#FFFDD0',
+                    }}
+                    >
+                <Grid container spacing={12}> {/* Spacing between image and text/buttons */}
+                    <Grid item>
+                    </Grid>
+                    <Grid item xs={20} sm container>
+                    <Grid item xs container direction="column" spacing={4}>
+                        <Grid item xs>
+                            <Typography gutterBottom variant="subtitle1" component="div">
+                                {s.name}
+                            </Typography>
+                            <Typography variant="body2" gutterBottom>
+                                {s.ingredients.join(", ")}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {s.info}
+                            </Typography>
+                        </Grid>
+                    </Grid>
+            
+            <Grid item>
+                <Typography variant="subtitle1" component="div">
+                    {s.price}
+                </Typography>
+                </Grid>
+                </Grid>
+            </Grid>
+            </Paper>
+            ))
+        }
+        </>
 
             <Button
                 type="submit"

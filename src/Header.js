@@ -44,7 +44,7 @@ export default function Header({handleIsAuthChange, isLoggedIn, handleUserLogged
         ? 
           <> 
           Welcome {loggedInUsername}
-            <Cart />
+            <Cart loggedInUsername={loggedInUsername}/>
             <Button onClick={handleLogout} color="inherit">Logout</Button>
           </>
          
