@@ -2,9 +2,12 @@ const express = require("express");  //requires (imports) the               //ex
 const PORT = process.env.PORT || 5000;  //see below
 const server = express();
 const fs = require('fs');
+const path = require('path');
+
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
+server.use(express.static(path.join(__dirname, 'public')));
 
 server.get("/api/getsandwiches", (req, res) => {
     var return_obj = {}

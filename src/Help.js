@@ -10,9 +10,9 @@ const Help = () => {
       <Grid container={1} direction={"row"} spacing={5}>
 
         <Grid xs={1} sm={14} item>
-          <h1 align={'centre'} pt={10}>Help Page</h1>
+          <h1 align={'centre'} pt={10}>Help Page + Acknowledgements</h1>
           <h3>This page should clear up any confusion there is when using the application</h3>
-          <h4>It contains information about elements that you are quite unsure of</h4>
+          <h4>It contains information about elements that you are quite unsure of, as well as acknowledgements of all resources used to create this website</h4>
         </Grid> 
 
       </Grid>
@@ -97,8 +97,26 @@ const Help = () => {
 </CardContent>
 </Card>
 
+<Card>
+<CardContent style={{flex:1, backgroundColor:'#FFF'}} align={'Center'}> 
+  <Grid container={1} direction={"row"} spacing={5}>
+
+    <Grid xs={1} sm={14} item>
+      <h3>ACKNOWLEDGEMENTS:</h3>
+      <h4>1: Material UI Library - https://mui.com/</h4>
+      <h4>2: Contact Us Form - https://www.youtube.com/watch?v=Lv3OhfcxjkA</h4>
+      <h4>3: Backend (Login) - https://auth0.com/docs/quickstart/backend</h4>
+      <h4>4: Backend (Sign Up) - https://fusionauth.io/docs/v1/tech/apis/registrations</h4>
+      <h4>5: Backend (Contact Us) - https://medium.com/datafire-io/simple-backends-four-ways-to-implement-a-contact-us-form-on-a-static-website-10fc430984a4</h4>
+      <h4>6: Backend (Cart) - https://shopify.dev/api/ajax/reference/cart</h4>
+    </Grid> 
+
+  </Grid>
+</CardContent>
+</Card>
 
 </div>
+
   );
 };
 export default Help;

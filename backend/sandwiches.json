@@ -4,7 +4,7 @@
         "ingredients": ["Lettuce", "Tomato", "Cheese"],
         "info": "Gluten Free",
         "price":"$19.00",
-        "image": "Albert/ReactProjects/sandwichshop/LCT.JPG",
+        "image": "LCT.JPG",
         "color1": "#ffd7b5"
     },
     {
@@ -12,7 +12,7 @@
         "ingredients": ["Cucumber", "Cheese", "Ham"],
         "info": "Gluten Free",
         "price":"$19.00",
-        "image": "C:/Users/Albert/ReactProjects/sandwichshop/HCC.JPG",
+        "image": "HCC.jpg",
         "color1": "#FF6961"
     },
     {
@@ -20,7 +20,7 @@
         "ingredients": ["Ham", "Tomato", "Cheese", "Lettuce"],
         "info": "Gluten Free",
         "price":"$19.00",
-        "image": "C:/Users/Albert/ReactProjects/sandwichshop/sandwich.JPG",
+        "image": "sandwich.JPG",
         "color1": "#ffa9a9"
     },
     {
@@ -28,7 +28,7 @@
         "ingredients": ["Salami", "Chilli Chicken", "Mortadella", "Turkey Breast"],
         "info": "Gluten Free",
         "price":"$19.00",
-        "image": "C:/Users/Albert/ReactProjects/sandwichshop/SCMT.JPG",
+        "image": "SCMT.JPG",
         "color1": "#F4c2c2"
     },
     {
@@ -36,7 +36,7 @@
         "ingredients": ["Steak", "Onion", "Cheese"],
         "info": "Contains Dairy",
         "price":"$25.00",
-        "image": "C:/Users/Albert/ReactProjects/sandwichshop/SOC.JPG",
+        "image": "SOC.JPG",
         "color1": "#ff5a5a"
     }
 
