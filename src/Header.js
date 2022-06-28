@@ -62,7 +62,7 @@ export default function Header({handleIsAuthChange, isLoggedIn, handleUserLogged
       }           
     </Toolbar>
   </AppBar>
-
+    // All non-code templates is original code
 
     );
   }

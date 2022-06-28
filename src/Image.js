@@ -107,5 +107,8 @@ export default function ComplexGrid({ isLoggedIn, loggedInUsername }) {
       }
     </>
 
+    // All code templates above were modified from MUI Website
+    // All non-code templates is original code
+
   );
 }

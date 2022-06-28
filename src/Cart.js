@@ -45,6 +45,8 @@ export default function Cart({ loggedInUsername }) {
                 console.log(res.data.sandwiches)
             })
     };
+    // backend code that performs all the routing so the program can store sandwiches in the cart
+    // Modified code from multiple websites
 
     return (
         <div>
@@ -56,6 +58,7 @@ export default function Cart({ loggedInUsername }) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
+                {/* Code template modified from MUI website */}
                 <Box sx={style}>
                     <Grid container justify="flex-end" alignItems="flex-end">
                         <Box component="form" noValidate sx={{ mt: 1 }}>
@@ -132,5 +135,9 @@ export default function Cart({ loggedInUsername }) {
                 </Box>
             </Modal>
         </div>
+    
+    // All non-code templates is original code
+    // Code templates above taken and modified from MUI Website 
+
     )
 }

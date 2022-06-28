@@ -53,6 +53,9 @@ const Contact = () => {
   });
 };
 
+// All code above reused from the login axios 
+// Code was originaly modified from axios website
+
 function refreshPage() {
   alert("Thank you for your feedback. We will try to respond to your inquiry as soon as possible!!!")
   window.location.reload(false)
@@ -190,6 +193,11 @@ function refreshPage() {
       </Card>
       </form>
     </div>
+
+    // Code template above was reused numerous times 
+    // Original code template was modified from MUI Contact Us Youtube Video
+    // All non-code templates is original code
+
     
   );
 };

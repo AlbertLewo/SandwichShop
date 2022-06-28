@@ -48,6 +48,7 @@ export default function SignUp({handleIsAuthChange, handleUserLoggedIn}) {
     handleIsAuthChange(true)
     console.log(response.data.username)
     handleUserLoggedIn(response.data.username)
+    alert("Sign Up Successful!")
   }
 
   else if(response.data.status == '401'){
@@ -57,6 +58,10 @@ export default function SignUp({handleIsAuthChange, handleUserLoggedIn}) {
     console.log(response.data);
   });
 
+  // Backend code for sign up function
+  // Checks if details exist in Sign Up storage file
+  // If details don't exist, it creates a new record for the user 
+  // Then, once the user signs up, they're immediately logged in (for conveniece)
     
   }
 
@@ -114,5 +119,10 @@ export default function SignUp({handleIsAuthChange, handleUserLoggedIn}) {
         </Box>
     </Modal>
     </div>
+
+    // All non-code templates is original code
+    // Code templates taken/modified from MUI Website
+    // Backend code modified from multiple websites and videos (axios, Youtube)
+
     )
 }

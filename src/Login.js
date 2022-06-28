@@ -35,19 +35,23 @@ export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
     const userData = JSON.stringify({
         username: username,
         password: password,
-     }) ;  
+     }) ; 
 
     axios.post("/api/login", userData, {headers:{"Content-Type" : "application/json"}}
     ).then((response) => {
             if(response.data.status == '200'){
                 handleIsAuthChange(true)
                 handleUserLoggedIn(response.data.username)
+                alert("Login Successful. Welcome Back!")
             }
             else if(response.data.status == '401'){
                 alert("Wrong username/password, please retry")
             }
         });
     }
+
+    // Backend code for login function
+    // Checks if details exist in Sign Up storage file
 
     return (
         <div>
@@ -58,6 +62,7 @@ export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
             >
+        {/* Modal Tag was customised from MUI website to suit the requirements of the website */}
        
         <Box sx={style}>
         <form onSubmit={handleSubmit2}>
@@ -106,5 +111,10 @@ export default function Login({handleIsAuthChange, handleUserLoggedIn}) {
     </Box>
     </Modal>
     </div>
+    
+    // All non-code templates is original code
+    // Code templates taken/modified from MUI Website
+    // Backend code modified from multiple websites and videos (axios, Youtube)
+
 )
 }

@@ -50,7 +50,10 @@ function App() {
         <Route path='/Contact' element={<Contact/>} />
         <Route path='/Help' element={<Help/>} />
       </Routes>
+      {/* The buttons that the user sees when using the website */}
     </main>
+    // All non-code templates is original code
+
   )
 }
 export default App;

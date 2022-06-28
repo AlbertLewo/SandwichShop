@@ -117,6 +117,12 @@ const Help = () => {
 
 </div>
 
+// Code template above was reused numerous times 
+// Original code template was modified from MUI Contact Us Youtube Video
+// Code was reused from the 'Contact.JS' module/component
+// All non-code templates is original code
+
+
   );
 };
 export default Help;

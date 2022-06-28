@@ -56,14 +56,6 @@ const Stores = () => {
             Located in a small arcade within the heart of the city.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -88,14 +80,8 @@ const Stores = () => {
             Located near a reserve so customers can enjoy their sandwiches in a relaxing environment.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
       </Grid>
       <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -120,14 +106,6 @@ const Stores = () => {
             A stunning heritage store with a porch to enjoy your food. The grassy front lawn is perfect for furry pets and children to run around while you enjoy your meal.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -152,14 +130,6 @@ const Stores = () => {
             Siuated near the Brisbane City Botanical Gardens, a gorgeous flower garden where customers are able to bring their mealds to and enjoy the environment.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -184,14 +154,6 @@ const Stores = () => {
             Located near a decent-sized park. A perfect location to enjoy our sandwiches on a beautiful sunny day.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -216,14 +178,6 @@ const Stores = () => {
             Located on Swan river, a stunning river that streams to the North/South Mole lighthouses. Perfect to enjoy a snadwich and some waterviews.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -248,14 +202,6 @@ const Stores = () => {
             Yet another store located near a beach so you can enjoy your sandwiches with a view of the ocean.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -280,14 +226,6 @@ const Stores = () => {
             Located within the heart of Melbourne. Customers may take a seat and gaze upon the metropolis of Melbourne.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -312,14 +250,6 @@ const Stores = () => {
             Montrose Forshore Community Park is a local park that many customers take their meals to and enjoy the scenery.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
@@ -344,20 +274,15 @@ const Stores = () => {
             Situated near a cute and hidden park that all of our locals eat at. It features a few benches and a play area for pets and kids.
           </Typography>
         </Grid>
-        <Grid item>
-          {/*Button???*/}
-        </Grid>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" component="div">
-         {/*Money???*/}
-        </Typography>
       </Grid>
     </Grid>
   </Grid>
 <br></br>
-
 </Paper>
+
+// Code template was taken/modified from the MUI website 
+// Code was reused multiple times for convenience and to speed up develompent process
+
   );
 };
 
